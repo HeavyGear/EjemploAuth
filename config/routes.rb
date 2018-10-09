@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-    # Home controller routes.
-	  root   'home#index'
-	  get    'auth'            => 'home#auth'
+	# RUtas de Home Controller
+	root   'home#index'
+	get    'auth'            => 'home#auth'
 	  
-	  # Get login token from Knock
-	  post   'user_token'      => 'user_token#create'
-	  
-	  # User actions
-	  get    '/users'          => 'users#index'
-	  post   '/users/create'   => 'users#create'
+	# Obtener el token de inicio de sesión desde Knock
+	post   'user_token'      => 'user_token#create'
+	
+	# Acciones de User
+	get    '/users'          => 'users#index'
+	post   '/users/create'   => 'users#create'
 end
